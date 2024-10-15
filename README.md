@@ -5,7 +5,7 @@ favorites-web, an open source cloud collection project with 4.8k stars on GitHub
 
 
 ## version
-Favorites-web Project v1.3.0
+Favorites-web Project
 
 ## Vulnerability causes
 The main function of SecurityFilter.java to implement permission control is in the doFilter function.
