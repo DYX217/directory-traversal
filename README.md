@@ -172,10 +172,10 @@ public void init(FilterConfig arg0) throws ServletException {
 First, we find an interface that requires authentication to access, `/export`. The function corresponding to this interface is to export favorites.
 
 Then, we tried to access this endpoint by Postman without authentication information. We can see that due to the lack of authentication information, the request is redirected to index.html.
-![normal access](blob:https://github.com/2ca9838e-bbca-41a5-b987-89bd5c9ec1e0)
+![normal access](https://github.com/DYX217/directory-traversal/blob/main/image/bypass.png)
 
 After that, also without authentication information, we try to access the `/login/../export` interface. We can see that the access is successful.
-![directory traversal](blob:https://github.com/335b19fd-e372-4d41-b25b-c2c073e55497)
+![directory traversal](https://github.com/DYX217/directory-traversal/blob/main/image/normal.png)
 
 ## Impact
 
