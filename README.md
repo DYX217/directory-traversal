@@ -4,8 +4,11 @@ Introduce the incorrect access control vulnerabilities in favorites-web project.
 favorites-web, an open source cloud collection project with 4.8k stars on GitHub, has a directory traversal vulnerability in the file [SecurityFilter.java](https://github.com/cloudfavorites/favorites-web/blob/master/app/src/main/java/com/favorites/comm/filter/SecurityFilter.java). In the Spring Boot service, an important role of the filter layer is permission control, that is, to verify permissions before the request reaches the target resource to ensure that only authorized users can access specific resources.
 
 
-## version
-Favorites-web Project
+## Version
+Favorites-web Project 1.3.0
+
+## Attack Vector
+In the favorites-web project, the favorites-web/app/src/main/java/com/favorites/comm/filter/SecurityFilter.java code uses the unsafe method getRequestURI to obtain user requests and then match the authentication-free whitelist. When matching, the contains and startsWith functions are used, and identity authentication is not performed for requests that contain the specified string or start with the specified string. Therefore, directory traversal can be used to bypass identity authentication and access privileged interfaces.
 
 ## Vulnerability causes
 The main function of SecurityFilter.java to implement permission control is in the doFilter function.
